@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Mini site web HTML/CSS/JS : hero, à propos, projets, contact, thème clair/sombre." />
+    <title>Mon Mini-Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <header class="site-header" id="hero">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a class="brand" href="#hero">MonSite</a>
+        <button id="theme-toggle" class="btn ghost" aria-pressed="false" aria-label="Basculer clair/sombre">
+          🌓 Thème
+        </button>
+        <ul class="nav-links">
+          <li><a class="btn" href="#about">À propos</a></li>
+          <li><a class="btn" href="#projects">Projets</a></li>
+          <li><a class="btn" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">Construisons quelque chose de chouette.</h1>
+          <p class="lead">Une page responsive et interactive avec HTML, CSS et JavaScript.</p>
+          <a class="btn primary" href="#projects">Voir mes projets</a>
+        </div>
+      </section>
+    </header>
+
+    <main id="main">
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title">À propos</h2>
+          <div class="about-grid">
+            <p>
+              Bienvenue ! Ce mini-site démontre une structure HTML5 sémantique,
+              un design responsive et quelques interactions JavaScript (validation du formulaire,
+              thème clair/sombre, bouton retour en haut).
+            </p>
+            <figure>
+              <img src="images/hero.jpg" alt="Portrait ou illustration de l'auteur" />
+              <figcaption>Une petite légende d'image.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="container">
+          <h2 id="projects-title">Projets</h2>
+          <div class="cards">
+            <article class="card">
+              <img src="images/mater.jpg" alt="Aperçu du projet 1" />
+              <div class="card-body">ss
+                <h3>Projet 1</h3>
+                <p>Brève description du projet 1. Ce texte tient sur quelques lignes.</p>
+                <a class="btn outline" href="#" target="_blank" rel="noopener">Voir</a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/commer.jpg" alt="Aperçu du projet 2" />
+              <div class="card-body">
+                <h3>Projet 2</h3>
+                <p>Brève description du projet 2. Design responsive et clair.</p>
+                <a class="btn outline" href="#" target="_blank" rel="noopener">Voir</a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/porfolio.jpg" alt="Aperçu du projet 3" />
+              <div class="card-body">
+                <h3>Projet 3</h3>
+                <p>Brève description du projet 3. Accessibilité et bonnes pratiques.</p>
+                <a class="btn outline" href="#" target="_blank" rel="noopener">Voir</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title">Contact</h2>
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+              <p class="error" id="name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+              <p class="error" id="email-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" minlength="10" required></textarea>
+              <p class="error" id="message-error" aria-live="polite"></p>
+            </div>
+            <button class="btn primary" type="submit">Envoyer</button>
+            <p class="success" id="form-success" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Ton Nom — Tous droits réservés.</small>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Revenir en haut">↑</button>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
